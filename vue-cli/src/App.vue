@@ -20,6 +20,7 @@
     <!-- Insert a title and a message -->
     <!-- <h1>{{ title }}</h1>
     <h2>{{ msg }}</h2> -->
+    
     <!-- Ask user to input their name -->
     <h2>{{ msg2}}</h2>
     <input type="text" v-on:input="changeTitle"></br></br>
