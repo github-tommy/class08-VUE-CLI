@@ -26,7 +26,7 @@ export default {
     //     data: {
     //         email: ''
     //     }
-    })
+    // })
     
 }
 </script>
