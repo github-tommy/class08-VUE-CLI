@@ -104,6 +104,7 @@ export default {
   methods:{
     addLocation: function() {
       return this.location.push({name: this.newLocation})
+      this.newLocation= ''
     }
   }
 } // default
