@@ -3,10 +3,10 @@
 
     <app-header></app-header>
 
-    <!-- <router-view></router-view>
-    <router-link to="/Other">other</router-link>
-    <router-link to="/Next">next</router-link>
-    <router-link to="/">home</router-link> -->
+    <router-view></router-view>
+    <router-link to="/other">other</router-link>
+    <router-link to="/next">next</router-link>
+    <router-link to="/">home</router-link>
 
     <app-body></app-body>
 
@@ -17,9 +17,10 @@
         <li><a href="" target="_blank">Blog</a></li>
         <li><a href="http://tommysurjadi.com" target="_blank">About Me</a></li>
     </ul> -->
+    
     <!-- Insert a title and a message -->
-    <!-- <h1>{{ title }}</h1>
-    <h2>{{ msg }}</h2> -->
+    <h1>{{ title }}</h1>
+    <h2>{{ msg }}</h2>
     
     <!-- Ask user to input their name -->
     <h2>{{ msg2}}</h2>
@@ -59,6 +60,7 @@
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
       </div>
+      
 <app-footer></app-footer>
   </div>
 </template>
@@ -69,7 +71,7 @@ export default {
   data () {
     return {
       show: true,
-      title: 'Week08 - Vue CLI',
+      title: 'app - Week08 - Vue CLI',
       msg: 'Help me find a home:',
       location: [
         {name: 'Wallingford', startingPrice: 900},

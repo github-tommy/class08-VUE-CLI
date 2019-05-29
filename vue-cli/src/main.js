@@ -9,16 +9,15 @@ Vue.component('app-header', Header)
 Vue.component('app-body', Body)
 Vue.component('app-footer', Footer)
 
-// import VueRouter from 'vue-router';
+import VueRouter from 'vue-router';
 
-// Vue.use(VueRouter);
+Vue.use(VueRouter);
 // import {routes} from './components/router';
-// const router = new VueRouter({
-// routes,
-// mode: 'history'
+import {routes} from './components/router';
+const router = new VueRouter({
+  routes,
+  mode: 'history'
 // })
-
-
 
 new Vue({
 el: '#app',

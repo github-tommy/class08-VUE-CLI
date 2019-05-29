@@ -7,9 +7,19 @@
         <li><a href="" target="_blank">Blog</a></li>
         <li><a href="http://tommysurjadi.com" target="_blank">About Me</a></li>
     </ul>
-        <!-- Insert a title and a message -->
+    
+    <!-- Insert a title and a message -->
     <h1>{{ title }}</h1>
     <h2>{{ msg }}</h2>
+
+    <!-- Ask user to input their name -->
+    <h2>{{ msg2}}</h2>
+    <input type="text" v-on:input="changeTitle"></br></br>
+    <!-- Ask the user if they are interested onclick to show/hide -->
+    <button v-on:click="show = !show">Are you interested?</button>
+    <p v-if="show">Yes, I am!</p>
+    <p v-else>No, thanks.</p>
+    <hr>
 
     </div>
 
@@ -21,8 +31,9 @@ export default {
   data () {
     return {
       show: true,
-      title: 'W08 - Vue CLI',
+      title: 'app-header',
       msg: 'Help me find a home:',
+      msg1: 'Enter your email to subscribe to our mailing list.'
 
     } //return
   }, //data
