@@ -36,8 +36,14 @@
     <ul>
       <li style="list-style-typenone;" v-for="location in location">{{ location.name }}</li>
     </ul>
-    </div>
+    </div>   
 
+    <input v-model="newLocation">
+    <button v-on:click="addLocation">
+      +ADD LOCATION
+    </button>
+    <br>
+    <br>
     <!-- V-For for array of images -->
     <div class="gallery">
       <img v-for="img in images" v-bind:src="img"/>  
@@ -78,15 +84,9 @@ export default {
         {name: 'Fremont', startingPrice: 800},
         {name: 'Redmond', startingPrice: 700},
         {name: 'Kirkland', startingPrice: 750},
-        {name: 'Fremont', startingPrice: 800},
-        {name: 'Redmond', startingPrice: 700},
-        {name: 'Kirkland', startingPrice: 750},
-        {name: 'Kirkland', startingPrice: 750},
-        {name: 'Kirkland', startingPrice: 750},
-        {name: 'Kirkland', startingPrice: 750},
-        {name: 'Kirkland', startingPrice: 750},
         {name: 'Medina', startingPrice: 1300}
       ],
+      newLocation: '',
       images: [
         '/src/assets/picture1.jpg','/src/assets/picture1.jpg','/src/assets/picture1.jpg',
         '/src/assets/picture1.jpg'
@@ -99,6 +99,11 @@ export default {
   methods:{
     changeTitle: function(event){
       this.msg2 = event.target.value;
+    }
+    },
+  methods:{
+    addLocation: function() {
+      return this.location.push({name: this.newLocation})
     }
   }
 } // default
